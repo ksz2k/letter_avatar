@@ -8,10 +8,10 @@ Gem::Specification.new do |spec|
   spec.version       = LetterAvatar::VERSION
   spec.authors       = ["discourse developers", "Krzysiek Szczuka"]
   spec.email         = ["kszczuka@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
-  spec.license       = "MIT"
+  spec.description   = %q{Gem for creating letter avatar from user's name}
+  spec.summary       = %q{Create nice initals avatars from your users usernames}
+  spec.homepage      = "https://github.com/ksz2k/letter_avatar"
+  spec.license       = "GPL"
   
   spec.rubyforge_project = "letter_avatar"
 
