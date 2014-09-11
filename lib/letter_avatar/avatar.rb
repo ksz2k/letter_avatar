@@ -43,7 +43,7 @@ module LetterAvatar
         fullsize = fullsize_path(identity)
         generate_fullsize(identity) if !cache || !File.exists?(fullsize)
 
-        OptimizedImage.resize(fullsize, filename, size, size)
+        LetterAvatar.resize(fullsize, filename, size, size)
         filename
       end
 
