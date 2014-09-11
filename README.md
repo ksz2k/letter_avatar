@@ -13,7 +13,9 @@ System requirements
 
 Add this line to your application's Gemfile:
 
-    gem 'letter_avatar'
+```ruby
+gem 'letter_avatar'
+```
 
 And then execute:
 
@@ -22,6 +24,14 @@ And then execute:
 Or install it yourself as:
 
     $ gem install letter_avatar
+    
+## Configuration
+
+```ruby
+    LetterAvatar.setup do |config|
+      config.cache_base_path='public/system/lets' # default is 'public/system'
+    end
+```
 
 ## Usage
 
