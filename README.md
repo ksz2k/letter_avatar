@@ -36,7 +36,8 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-LetterAvatar::Avatar.generate 'ksz2k', 200
+  LetterAvatar::Avatar.generate 'ksz2k', 200
+  => "public/system/letter_avatars/2/K/87_178_230/200.png"
 ```
 
 ## Contributing
