@@ -34,7 +34,7 @@ module LetterAvatar
     end
   end
   
-  def generate(username, size)
+  def self.generate(username, size)
     Avatar.generate(username, size)
   end
   
