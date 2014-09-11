@@ -26,7 +26,7 @@ module LetterAvatar
 
 
       def cache_path
-        LetterAvatar.cache_path || "public/system/letter_avatars/#{VERSION}"
+        "#{LetterAvatar.cache_base_path || 'public/system'}/letter_avatars/#{VERSION}"
       end
 
       def generate(username, size, opts = nil)

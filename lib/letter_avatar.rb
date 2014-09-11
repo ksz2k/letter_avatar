@@ -3,8 +3,8 @@ require "letter_avatar/avatar"
 
 module LetterAvatar
   
-  mattr_accessor :cache_path
-  @@cache_path = ''
+  mattr_accessor :cache_base_path
+  @@cache_base_path = nil
   
   def self.setup(&block)
     yield(self)
