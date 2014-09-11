@@ -25,7 +25,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+LetterAvatar::Avatar.generate 'ksz2k', 200
+```
 
 ## Contributing
 
