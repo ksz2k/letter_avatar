@@ -6,7 +6,7 @@ require 'letter_avatar/version'
 Gem::Specification.new do |spec|
   spec.name          = "letter_avatar"
   spec.version       = LetterAvatar::VERSION
-  spec.authors       = ["Krzysiek Szczuka"]
+  spec.authors       = ["discourse developers", "Krzysiek Szczuka"]
   spec.email         = ["kszczuka@gmail.com"]
   spec.description   = %q{TODO: Write a gem description}
   spec.summary       = %q{TODO: Write a gem summary}
