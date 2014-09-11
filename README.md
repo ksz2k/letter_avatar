@@ -1,6 +1,9 @@
 # LetterAvatar
 
-TODO: Write a gem description
+Gem for creating letter avatar from user's name.
+
+Code extracted from discuss source (thanks guys!)
+
 
 ## Installation
 
