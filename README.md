@@ -28,16 +28,16 @@ Or install it yourself as:
 ## Configuration
 
 ```ruby
-    LetterAvatar.setup do |config|
-      config.cache_base_path='public/system/lets' # default is 'public/system'
-    end
+LetterAvatar.setup do |config|
+  config.cache_base_path='public/system/lets' # default is 'public/system'
+end
 ```
 
 ## Usage
 
 ```ruby
-  LetterAvatar::Avatar.generate 'ksz2k', 200
-  => "public/system/letter_avatars/2/K/87_178_230/200.png"
+LetterAvatar::Avatar.generate 'ksz2k', 200
+=> "public/system/letter_avatars/2/K/87_178_230/200.png"
 ```
 
 ## Contributing
