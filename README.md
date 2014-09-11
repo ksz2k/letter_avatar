@@ -7,6 +7,10 @@ Code extracted from discourse source (thanks guys!)
 
 ## Installation
 
+System requirements
+
+    sudo apt-get install -y advancecomp gifsicle jhead jpegoptim libjpeg-progs optipng pngcrush pngquant
+
 Add this line to your application's Gemfile:
 
     gem 'letter_avatar'
