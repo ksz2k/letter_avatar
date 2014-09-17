@@ -10,7 +10,7 @@ module LetterAvatar::AvatarHelper
   end
 
   def letter_avatar_tag(name, size = 64)
-    image_tag(avatar_url_for(avatar_for(name, size)))
+    image_tag(letter_avatar_url_for(letter_avatar_for(name, size)))
   end
 
 end
