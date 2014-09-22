@@ -18,7 +18,7 @@ module LetterAvatar
           identity.color = LetterAvatar::COLORS[
               Digest::MD5.hexdigest(username)[0...15].to_i(16) % LetterAvatar::COLORS.length
           ]
-          identity.letter = username[0].upcase
+          identity.letter = username.first.upcase
 
           identity
         end
