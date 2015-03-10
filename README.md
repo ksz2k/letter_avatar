@@ -2,7 +2,7 @@
 
 Gem for creating letter avatar from user's name.
 
-Code extracted from discourse source (thanks guys!) - I needed this functionality in three projects, so here's gem! :-)
+Code extracted from discourse source (thanks guys!) - I needed this functionality in three projects, so here's the gem! :-)
 
 
 ## Installation
