@@ -41,6 +41,13 @@ LetterAvatar.generate 'ksz2k', 200
 => "public/system/letter_avatars/2/K/87_178_230/200.png"
 ```
 
+There's also helper for this:
+
+```ruby
+include LetterAvatar::AvatarHelper
+letter_avatar_for('ksz2k', 200)
+```
+
 ## Contributing
 
 1. Fork it
