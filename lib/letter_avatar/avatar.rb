@@ -1,3 +1,5 @@
+require "letter_avatar/colors"
+
 module LetterAvatar
   class Avatar
 
@@ -15,9 +17,7 @@ module LetterAvatar
 
         def self.from_username(username)
           identity = new
-          identity.color = LetterAvatar::COLORS[
-              Digest::MD5.hexdigest(username)[0...15].to_i(16) % LetterAvatar::COLORS.length
-          ]
+          identity.color = LetterAvatar::Colors.for(username)
           identity.letter = username.first.upcase
 
           identity
