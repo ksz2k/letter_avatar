@@ -41,12 +41,20 @@ LetterAvatar.generate 'ksz2k', 200
 => "public/system/letter_avatars/2/K/87_178_230/200.png"
 ```
 
-There's also helper for this:
+There's also helper for this. To use it, you need:
 
-```ruby
-include LetterAvatar::AvatarHelper
-letter_avatar_for('ksz2k', 200)
-```
+* in your helper (eg. `ApplicationHelper`) or controller:
+
+  ```ruby
+  include LetterAvatar::AvatarHelper
+  letter_avatar_for('ksz2k', 200)
+  ```
+
+* and in your view:
+
+  ```ruby
+  letter_avatar_for('ksz2k', 200)
+  ```
 
 ## Contributing
 
