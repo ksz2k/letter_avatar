@@ -2,8 +2,8 @@ module LetterAvatar
   module Colors
 
     def self.for(username)
-      COLORS[
-        Digest::MD5.hexdigest(username)[0...15].to_i(16) % COLORS.length
+      all[
+        Digest::MD5.hexdigest(username)[0...15].to_i(16) % all.length
       ]
     end
 
@@ -13,7 +13,9 @@ module LetterAvatar
     #   - H: 0 - 360
     #   - C: 0 - 2
     #   - L: 0.75 - 1.5
-    COLORS = [[198,125,40],
+    def self.all
+      [
+        198,125,40],
         [61,155,243],
         [74,243,75],
         [238,89,166],
@@ -228,7 +230,9 @@ module LetterAvatar
         [118,211,238],
         [157,224,83],
         [218,105,73],
-        [126,169,36]]
+        [126,169,36]
+      ]
+    end
 
   end
 end
