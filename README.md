@@ -4,6 +4,7 @@ Gem for creating letter avatar from user's name.
 
 Code extracted from discourse source (thanks guys!) - I needed this functionality in three projects, so here's the gem! :-)
 
+[![Code Climate](https://codeclimate.com/github/ksz2k/letter_avatar/badges/gpa.svg)](https://codeclimate.com/github/ksz2k/letter_avatar)
 
 ## Installation
 
@@ -24,7 +25,7 @@ And then execute:
 Or install it yourself as:
 
     $ gem install letter_avatar
-    
+
 ## Configuration
 
 ```ruby
