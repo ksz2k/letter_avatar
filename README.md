@@ -47,7 +47,6 @@ There's also helper for this. To use it, you need:
 
   ```ruby
   include LetterAvatar::AvatarHelper
-  letter_avatar_for('ksz2k', 200)
   ```
 
 * and in your view:
