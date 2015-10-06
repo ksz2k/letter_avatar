@@ -9,8 +9,8 @@ module LetterAvatar::AvatarHelper
     avatar_path.to_s.gsub(/public/,'')
   end
 
-  def letter_avatar_tag(name, size = 64)
-    image_tag(letter_avatar_url_for(letter_avatar_for(name, size)))
+  def letter_avatar_tag(name, size = 64, options = {})
+    image_tag(letter_avatar_url_for(letter_avatar_for(name, size)), options)
   end
 
 end
