@@ -73,7 +73,7 @@ module LetterAvatar
           -gravity Center
           -stroke #{to_rgb(stroke)}
           -strokewidth 2
-          -annotate -5+40 '#{letter}'
+          -annotate -5+20 '#{letter}'
           '#{filename}'
         }
 
