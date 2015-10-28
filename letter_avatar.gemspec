@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.summary       = %q{Create nice initals avatars from your users usernames}
   spec.homepage      = "https://github.com/ksz2k/letter_avatar"
   spec.license       = "GPL"
-  
+
   spec.rubyforge_project = "letter_avatar"
 
   spec.files         = `git ls-files`.split($/)
@@ -22,5 +22,4 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
-  spec.add_development_dependency "image_optim"
 end

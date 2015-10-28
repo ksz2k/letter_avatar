@@ -10,7 +10,7 @@ Code extracted from discourse source (thanks guys!) - I needed this functionalit
 
 System requirements
 
-    sudo apt-get install -y advancecomp gifsicle jhead jpegoptim libjpeg-progs optipng pngcrush pngquant
+    sudo apt-get install -y imagemagick
 
 Add this line to your application's Gemfile:
 

@@ -1,5 +1,6 @@
 require "letter_avatar/version"
 require "letter_avatar/avatar"
+require "letter_avatar/avatar_helper"
 
 module LetterAvatar
 
@@ -27,7 +28,6 @@ module LetterAvatar
     `convert #{instructions}`
 
     if $?.exitstatus == 0
-      ImageOptim.new.optimize_image(to) rescue nil
       true
     else
       false

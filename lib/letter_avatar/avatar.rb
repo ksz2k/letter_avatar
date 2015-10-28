@@ -71,16 +71,13 @@ module LetterAvatar
           -pointsize 200
           -fill white
           -gravity Center
-          -font 'Helvetica'
           -stroke #{to_rgb(stroke)}
           -strokewidth 2
-          -annotate -5+25 '#{letter}'
+          -annotate -5+20 '#{letter}'
           '#{filename}'
         }
 
         `convert #{instructions.join(" ")}`
-
-        ImageOptim.new.optimize_image(filename) rescue nil
 
         filename
       end
