@@ -10,7 +10,7 @@ module LetterAvatar
     # we will need to change this
     FULLSIZE = 240
 
-    class<<self
+    class << self
 
       class Identity
         attr_accessor :color, :letter
@@ -63,16 +63,14 @@ module LetterAvatar
         letter = identity.letter
 
         filename = fullsize_path(identity)
-        stroke = darken(color, 0.8)
+        fill_color = 'rgba(255, 255, 255, 0.65)'
 
         instructions = %W{
           -size 240x240
           xc:#{to_rgb(color)}
           -pointsize 200
-          -fill white
+          -fill '#{fill_color}'
           -gravity Center
-          -stroke #{to_rgb(stroke)}
-          -strokewidth 2
           -annotate -5+20 '#{letter}'
           '#{filename}'
         }

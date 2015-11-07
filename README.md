@@ -6,11 +6,23 @@ Code extracted from discourse source (thanks guys!) - I needed this functionalit
 
 [![Code Climate](https://codeclimate.com/github/ksz2k/letter_avatar/badges/gpa.svg)](https://codeclimate.com/github/ksz2k/letter_avatar)
 
+## Examples
+
+![z](https://cloud.githubusercontent.com/assets/5518/11013388/8f0ae550-8546-11e5-97b2-069157fde2ef.png) ![m](https://cloud.githubusercontent.com/assets/5518/11013389/8f0e6d10-8546-11e5-9dd0-a80c0363a9c5.png) ![l](https://cloud.githubusercontent.com/assets/5518/11013390/8f0fad06-8546-11e5-8f65-84a593deb469.png) ![n](https://cloud.githubusercontent.com/assets/5518/11013393/8f50d3da-8546-11e5-8239-ebf33592a074.png) ![g](https://cloud.githubusercontent.com/assets/5518/11013391/8f5013f0-8546-11e5-8f1f-7fd13fbd7f02.png) ![h](https://cloud.githubusercontent.com/assets/5518/11013392/8f509dc0-8546-11e5-9919-b2dc9c35b873.png) ![s](https://cloud.githubusercontent.com/assets/5518/11013394/8f911da0-8546-11e5-92bd-3d33874a67cb.png)
+
 ## Installation
 
 System requirements
 
-    sudo apt-get install -y imagemagick
+```bash
+$ sudo apt-get install -y imagemagick
+```
+
+Mac OS X
+
+```bash
+$ brew install imagemagick ghostscript
+```
 
 Add this line to your application's Gemfile:
 
@@ -20,17 +32,21 @@ gem 'letter_avatar'
 
 And then execute:
 
-    $ bundle
+```bash
+$ bundle
+```
 
 Or install it yourself as:
 
-    $ gem install letter_avatar
+```bash
+$ gem install letter_avatar
+```
 
 ## Configuration
 
 ```ruby
 LetterAvatar.setup do |config|
-  config.cache_base_path='public/system/lets' # default is 'public/system'
+  config.cache_base_path = 'public/system/lets' # default is 'public/system'
 end
 ```
 
