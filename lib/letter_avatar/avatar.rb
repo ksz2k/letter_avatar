@@ -69,10 +69,12 @@ module LetterAvatar
         instructions = %W{
           -size 240x240
           xc:#{to_rgb(color)}
-          -pointsize 150
+          -pointsize 140
+          -font Roboto-Medium
+          -weight 500
           -fill '#{FILL_COLOR}'
           -gravity Center
-          -annotate -5+20 '#{letter}'
+          -annotate -0+10 '#{letter}'
           '#{filename}'
         }
 
