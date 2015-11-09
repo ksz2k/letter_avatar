@@ -10,6 +10,8 @@ module LetterAvatar
     # we will need to change this
     FULLSIZE = 240
 
+    FILL_COLOR = 'rgba(255, 255, 255, 0.65)'.freeze
+
     class << self
 
       class Identity
@@ -63,13 +65,12 @@ module LetterAvatar
         letter = identity.letter
 
         filename = fullsize_path(identity)
-        fill_color = 'rgba(255, 255, 255, 0.65)'
 
         instructions = %W{
           -size 240x240
           xc:#{to_rgb(color)}
-          -pointsize 200
-          -fill '#{fill_color}'
+          -pointsize 150
+          -fill '#{FILL_COLOR}'
           -gravity Center
           -annotate -5+20 '#{letter}'
           '#{filename}'

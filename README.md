@@ -8,7 +8,8 @@ Code extracted from discourse source (thanks guys!) - I needed this functionalit
 
 ## Examples
 
-![z](https://cloud.githubusercontent.com/assets/5518/11013388/8f0ae550-8546-11e5-97b2-069157fde2ef.png) ![m](https://cloud.githubusercontent.com/assets/5518/11013389/8f0e6d10-8546-11e5-9dd0-a80c0363a9c5.png) ![l](https://cloud.githubusercontent.com/assets/5518/11013390/8f0fad06-8546-11e5-8f65-84a593deb469.png) ![n](https://cloud.githubusercontent.com/assets/5518/11013393/8f50d3da-8546-11e5-8239-ebf33592a074.png) ![g](https://cloud.githubusercontent.com/assets/5518/11013391/8f5013f0-8546-11e5-8f1f-7fd13fbd7f02.png) ![h](https://cloud.githubusercontent.com/assets/5518/11013392/8f509dc0-8546-11e5-9919-b2dc9c35b873.png) ![s](https://cloud.githubusercontent.com/assets/5518/11013394/8f911da0-8546-11e5-92bd-3d33874a67cb.png)
+![y](https://cloud.githubusercontent.com/assets/5518/11026688/5de280c0-86e8-11e5-927c-361f3becbf08.png) ![x](https://cloud.githubusercontent.com/assets/5518/11026687/5dddcf08-86e8-11e5-9b94-d691e6b4af9e.png) ![s](https://cloud.githubusercontent.com/assets/5518/11026690/5e2ae2d4-86e8-11e5-938e-b954aa7810f6.png) ![r](https://cloud.githubusercontent.com/assets/5518/11026689/5e292a48-86e8-11e5-9bc5-58b58341203a.png) ![n](https://cloud.githubusercontent.com/assets/5518/11026691/5e73c8f0-86e8-11e5-81ae-9d1ba96f3ea8.png) ![m](https://cloud.githubusercontent.com/assets/5518/11026692/5e73a71c-86e8-11e5-8c3a-752fa606ce98.png) ![l](https://cloud.githubusercontent.com/assets/5518/11026694/5eae94b2-86e8-11e5-9be7-9ac13b1e068e.png) ![j](https://cloud.githubusercontent.com/assets/5518/11026693/5eae0092-86e8-11e5-95e7-c4417e405776.png)
+
 
 ## Installation
 
