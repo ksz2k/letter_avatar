@@ -45,7 +45,7 @@ module LetterAvatar
         return all[char.to_i]
       end
 
-      return all[Digest::MD5.hexdigest(username)[0...15].to_i(16) % all.length]
+      all[Digest::MD5.hexdigest(username)[0...15].to_i(16) % all.length]
     end
 
     def self.all
