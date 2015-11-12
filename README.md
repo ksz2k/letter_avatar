@@ -70,6 +70,24 @@ There's also helper for this. To use it, you need:
   ```ruby
   letter_avatar_for('ksz2k', 200)
   ```
+  
+### Way to support non [a-z0-9] charsets
+
+```rb
+class User
+  def username_for_avatar
+    # Translate chinese hanzi to pinyin
+    # https://github.com/flyerhzm/chinese_pinyin
+    Pinyin.t(self.username)
+  end
+end
+```
+
+Then you can get right avatar now:
+
+```rb
+letter_avatar_for(user.username_for_avatar, 200)
+```
 
 ## Contributing
 
