@@ -5,7 +5,9 @@ require "letter_avatar/avatar_helper"
 module LetterAvatar
 
   mattr_accessor :cache_base_path
+  mattr_accessor :font
   @@cache_base_path = nil
+  @@font = nil
 
   def self.setup(&block)
     yield(self)

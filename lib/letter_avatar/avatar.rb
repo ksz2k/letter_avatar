@@ -31,6 +31,10 @@ module LetterAvatar
         "#{LetterAvatar.cache_base_path || 'public/system'}/letter_avatars/#{VERSION}"
       end
 
+      def font
+        "#{LetterAvatar.font || 'Roboto-Medium'}"
+      end
+
       def generate(username, size, opts = nil)
         identity = Identity.from_username(username)
 
@@ -70,7 +74,7 @@ module LetterAvatar
           -size 240x240
           xc:#{to_rgb(color)}
           -pointsize 140
-          -font Roboto-Medium
+          -font #{font}
           -weight 500
           -fill '#{FILL_COLOR}'
           -gravity Center
