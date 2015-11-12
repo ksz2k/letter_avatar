@@ -42,7 +42,7 @@ module LetterAvatar
       elsif /[\d]/.match(char)
         COLORS[char.to_i]
       else
-        COLORS[Digest::MD5.hexdigest(username)[0...15].to_i(16) % all.length]
+        COLORS[Digest::MD5.hexdigest(username)[0...15].to_i(16) % COLORS.length]
       end
     end
 
