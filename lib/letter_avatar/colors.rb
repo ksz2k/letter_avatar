@@ -33,23 +33,17 @@ module LetterAvatar
     ]
 
     def self.for(username)
-      char = username[0]
-      char.upcase!
+      char = username[0].upcase
+
       if /[A-Z]/.match(char)
         # 65 is 'A' ord
         idx = char.ord - 65
-        return all[idx]
+        COLORS[idx]
+      elsif /[\d]/.match(char)
+        COLORS[char.to_i]
+      else
+        COLORS[Digest::MD5.hexdigest(username)[0...15].to_i(16) % all.length]
       end
-
-      if /[\d]/.match(char)
-        return all[char.to_i]
-      end
-
-      all[Digest::MD5.hexdigest(username)[0...15].to_i(16) % all.length]
-    end
-
-    def self.all
-      COLORS
     end
 
   end
