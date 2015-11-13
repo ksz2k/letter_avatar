@@ -59,7 +59,7 @@ We have two color palettes implemented: `iwanthue` and `google`.
 
 Each of them have different colors, but the `iwanthue` also differently calculates the color for specyfied username.
 
-The `google` selected will generate the same avatar for both, "Krzysiek" and "ksz2k" usernames given, but `iwanthue` will calculate it's md5 and then selects color, so there's huge chance that these usernames get different colors.
+The `google` selected will generate the same avatar for both, "Krzysiek" and "ksz2k" usernames given (both of them starts with letter "k"), but `iwanthue` will calculate it's md5 and then selects color, so there's huge chance that these usernames get different colors.
 
 ## Usage
 
