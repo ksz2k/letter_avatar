@@ -8,6 +8,8 @@ Code extracted from discourse source (thanks guys!) - I needed this functionalit
 
 ## Examples
 
+#### Google's Inbox Palette
+
 ![a](https://cloud.githubusercontent.com/assets/5518/11028712/fb4ceb8a-86fb-11e5-8a94-c75eaf46b089.png) ![b](https://cloud.githubusercontent.com/assets/5518/11028713/fb55fc5c-86fb-11e5-9a67-a4e84ee618be.png) ![c](https://cloud.githubusercontent.com/assets/5518/11028715/fb5a8178-86fb-11e5-9312-9cc990b1a94f.png) ![d](https://cloud.githubusercontent.com/assets/5518/11028714/fb567f88-86fb-11e5-8e99-b14602321f69.png) ![e](https://cloud.githubusercontent.com/assets/5518/11028716/fb61d194-86fb-11e5-8bab-bc69cad905cc.png) ![f](https://cloud.githubusercontent.com/assets/5518/11028717/fb656d54-86fb-11e5-810a-f8a3847c0da8.png) ![g](https://cloud.githubusercontent.com/assets/5518/11028718/fb862e7c-86fb-11e5-8b46-42a64fb15f46.png) ![h](https://cloud.githubusercontent.com/assets/5518/11028719/fb8f1910-86fb-11e5-9794-433a9490b15a.png) ![j](https://cloud.githubusercontent.com/assets/5518/11028720/fb8f200e-86fb-11e5-8b20-476745abfe21.png) ![l](https://cloud.githubusercontent.com/assets/5518/11028721/fb923654-86fb-11e5-961c-92be1aaedef8.png) ![m](https://cloud.githubusercontent.com/assets/5518/11028722/fb9e68b6-86fb-11e5-8ba6-4e8ece3a9d89.png) ![n](https://cloud.githubusercontent.com/assets/5518/11028723/fba26826-86fb-11e5-9611-bde4bc7d84ed.png) ![p](https://cloud.githubusercontent.com/assets/5518/11028724/fbc4d9ec-86fb-11e5-85f3-0e0b46bbc9a1.png) ![s](https://cloud.githubusercontent.com/assets/5518/11028725/fbc5d464-86fb-11e5-937e-de11c747b70d.png)
 
 ## Installation
@@ -47,6 +49,7 @@ $ gem install letter_avatar
 ```ruby
 LetterAvatar.setup do |config|
   config.cache_base_path = 'public/system/lets' # default is 'public/system'
+  config.colors_palette = :iwanthue             # default is :google
 end
 ```
 
@@ -70,7 +73,7 @@ There's also helper for this. To use it, you need:
   ```ruby
   letter_avatar_for('ksz2k', 200)
   ```
-  
+
 ### Way to support non [a-z0-9] charsets
 
 ```rb

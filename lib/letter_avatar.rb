@@ -7,6 +7,9 @@ module LetterAvatar
   mattr_accessor :cache_base_path
   @@cache_base_path = nil
 
+  mattr_accessor :colors_palette
+  @@colors_palette = :google
+
   def self.setup(&block)
     yield(self)
   end
