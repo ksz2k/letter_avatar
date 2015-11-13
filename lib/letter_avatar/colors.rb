@@ -2,21 +2,27 @@ module LetterAvatar
   module Colors
 
     def self.for(username)
+      public_send("with_#{LetterAvatar.colors_palette}", username) rescue with_google(username)
+    end
+
+    def self.with_iwanthue(username)
+      iwanthue[
+        Digest::MD5.hexdigest(username)[0...15].to_i(16) % iwanthue.length
+      ]
+    end
+
+    def self.with_google(username)
       char = username[0].upcase
 
       if /[A-Z]/.match(char)
         # 65 is 'A' ord
         idx = char.ord - 65
-        COLORS[idx]
+        google[idx]
       elsif /[\d]/.match(char)
-        COLORS[char.to_i]
+        google[char.to_i]
       else
-        COLORS[Digest::MD5.hexdigest(username)[0...15].to_i(16) % COLORS.length]
+        google[Digest::MD5.hexdigest(username)[0...15].to_i(16) % google.length]
       end
-    end
-
-    def self.colors
-      public_send(LetterAvatar.colors_palette) rescue google
     end
 
 
