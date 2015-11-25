@@ -80,6 +80,8 @@ There's also helper for this. To use it, you need:
 
   ```ruby
   letter_avatar_for('ksz2k', 200)
+# or even
+letter_avatar_tag('ksz2k', 200, class: 'av')
   ```
 
 ### Way to support non [a-z0-9] charsets
@@ -98,8 +100,6 @@ Then you can get right avatar now:
 
 ```rb
 letter_avatar_for(user.username_for_avatar, 200)
-# or even
-letter_avatar_tag(name, 200, class: 'av')
 ```
 
 ## Contributing
