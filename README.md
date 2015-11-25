@@ -98,6 +98,8 @@ Then you can get right avatar now:
 
 ```rb
 letter_avatar_for(user.username_for_avatar, 200)
+# or even
+letter_avatar_tag(name, 200, class: 'av')
 ```
 
 ## Contributing
