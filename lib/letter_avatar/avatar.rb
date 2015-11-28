@@ -20,7 +20,7 @@ module LetterAvatar
         def self.from_username(username)
           identity = new
           identity.color = LetterAvatar::Colors.for(username)
-          identity.letter = username.first.upcase
+          identity.letter = username[0].upcase
 
           identity
         end
