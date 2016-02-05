@@ -57,7 +57,7 @@ end
 
 We have two color palettes implemented: `iwanthue` and `google`.
 
-Each of them have different colors, but the `iwanthue` also differently calculates the color for specyfied username.
+Each of them have different colors, but the `iwanthue` also differently calculates the color for specified username.
 
 The `google` selected will generate the same avatar for both, "Krzysiek" and "ksz2k" usernames given (both of them starts with letter "k"), but `iwanthue` will calculate it's md5 and then selects color, so there's huge chance that these usernames get different colors.
 
@@ -80,8 +80,8 @@ There's also helper for this. To use it, you need:
 
   ```ruby
   letter_avatar_for('ksz2k', 200)
-# or even
-letter_avatar_tag('ksz2k', 200, class: 'av')
+  # or even
+  letter_avatar_tag('ksz2k', 200, class: 'av')
   ```
 
 ### Way to support non [a-z0-9] charsets
@@ -100,6 +100,8 @@ Then you can get right avatar now:
 
 ```rb
 letter_avatar_for(user.username_for_avatar, 200)
+# or
+letter_avatar_tag(user.username_for_avatar, 200, class: 'av')
 ```
 
 ## Contributing
