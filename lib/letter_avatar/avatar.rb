@@ -75,7 +75,7 @@ module LetterAvatar
           xc:#{to_rgb(color)}
           -pointsize 140
           -font #{FONT_FILENAME}
-          -weight 500
+          -weight 300
           -fill '#{FILL_COLOR}'
           -gravity Center
           -annotate -0+5 '#{letter}'
