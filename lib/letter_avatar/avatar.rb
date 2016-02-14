@@ -78,7 +78,7 @@ module LetterAvatar
           -weight 500
           -fill '#{FILL_COLOR}'
           -gravity Center
-          -annotate -0+10 '#{letter}'
+          -annotate -0+5 '#{letter}'
           '#{filename}'
         )
 
