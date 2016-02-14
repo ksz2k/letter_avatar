@@ -12,6 +12,8 @@ module LetterAvatar
 
     FILL_COLOR = 'rgba(255, 255, 255, 0.65)'.freeze
 
+    FONT_FILENAME = File.join(File.expand_path("../../", File.dirname(__FILE__)), "Roboto-Medium")
+
     class << self
 
       class Identity
@@ -64,21 +66,30 @@ module LetterAvatar
         color = identity.color
         letter = identity.letter
 
+
         filename = fullsize_path(identity)
 
-        instructions = %W{
+        commands = %W(
+          convert
           -size 240x240
           xc:#{to_rgb(color)}
           -pointsize 140
-          -font Roboto-Medium
+          -font #{FONT_FILENAME}
           -weight 500
           -fill '#{FILL_COLOR}'
           -gravity Center
           -annotate -0+10 '#{letter}'
           '#{filename}'
-        }
+        )
 
-        `convert #{instructions.join(" ")}`
+        command = commands.join(' ')
+
+        pid, stdin, stdout, stderr = POSIX::Spawn.popen4(command)
+        Process.waitpid(pid)
+        err = stderr.read
+        if err != nil && err.length > 0
+          raise "letter_avatar error: #{err.strip}"
+        end
 
         filename
       end
