@@ -13,6 +13,9 @@ module LetterAvatar
   mattr_accessor :weight
   @@weight = 300
 
+  mattr_accessor :annotate_position
+  @@annotate_position = '-0+5'
+
   def self.setup(&block)
     yield(self)
   end

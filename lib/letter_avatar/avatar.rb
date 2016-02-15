@@ -70,20 +70,18 @@ module LetterAvatar
 
         filename = fullsize_path(identity)
 
-        commands = %W(
+        command = %W(
           convert
-          -size 240x240
+          -size #{FULLSIZE}x#{FULLSIZE}
           xc:#{to_rgb(color)}
           -pointsize 140
           -font #{FONT_FILENAME}
           -weight #{LetterAvatar.weight}
           -fill '#{FILL_COLOR}'
           -gravity Center
-          -annotate -0+5 '#{letter}'
+          -annotate #{LetterAvatar.annotate_position} '#{letter}'
           '#{filename}'
-        )
-
-        command = commands.join(' ')
+        ).join(' ')
 
         pid, stdin, stdout, stderr = POSIX::Spawn.popen4(command)
         Process.waitpid(pid)
