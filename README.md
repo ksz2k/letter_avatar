@@ -49,7 +49,8 @@ $ gem install letter_avatar
 ```ruby
 LetterAvatar.setup do |config|
   config.cache_base_path = 'public/system/lets' # default is 'public/system'
-  config.colors_palette = :iwanthue             # default is :google
+  config.colors_palette  = :iwanthue            # default is :google
+  config.weight          = 500                  # default is 300
 end
 ```
 

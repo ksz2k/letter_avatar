@@ -10,6 +10,9 @@ module LetterAvatar
   mattr_accessor :colors_palette
   @@colors_palette = :google
 
+  mattr_accessor :weight
+  @@weight = 300
+
   def self.setup(&block)
     yield(self)
   end

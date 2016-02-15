@@ -76,10 +76,10 @@ module LetterAvatar
           xc:#{to_rgb(color)}
           -pointsize 140
           -font #{FONT_FILENAME}
-          -weight 300
+          -weight #{LetterAvatar.weight}
           -fill '#{FILL_COLOR}'
           -gravity Center
-          -annotate #{annotate_position} '#{letter}'
+          -annotate -0+5 '#{letter}'
           '#{filename}'
         )
 
@@ -93,10 +93,6 @@ module LetterAvatar
         end
 
         filename
-      end
-
-      def annotate_position
-        LetterAvatar.colors_palette == :google ? '-0+5' : '-0+10'
       end
 
       def darken(color,pct)
