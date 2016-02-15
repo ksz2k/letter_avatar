@@ -79,7 +79,7 @@ module LetterAvatar
           -weight 300
           -fill '#{FILL_COLOR}'
           -gravity Center
-          -annotate -0+5 '#{letter}'
+          -annotate #{annotate_position} '#{letter}'
           '#{filename}'
         )
 
@@ -93,6 +93,10 @@ module LetterAvatar
         end
 
         filename
+      end
+
+      def annotate_position
+        LetterAvatar.colors_palette == :google ? '-0+5' : '-0+10'
       end
 
       def darken(color,pct)
