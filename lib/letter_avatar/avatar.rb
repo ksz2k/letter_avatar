@@ -1,3 +1,4 @@
+require 'posix/spawn'
 require "letter_avatar/colors"
 
 module LetterAvatar
