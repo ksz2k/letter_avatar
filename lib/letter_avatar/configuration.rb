@@ -4,7 +4,7 @@ module LetterAvatar
   module Configuration
 
     def cache_base_path
-      @cache_base_path ||= ''
+      @cache_base_path
     end
 
     def cache_base_path=(v)
