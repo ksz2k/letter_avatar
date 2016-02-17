@@ -30,6 +30,8 @@ module LetterAvatar
         }.join(" ")
       )
       true
+    rescue => e
+      false
     end
   end
 
