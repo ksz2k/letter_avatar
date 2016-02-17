@@ -1,8 +1,8 @@
 # LetterAvatar
 
-Gem for creating letter avatar from user's name.
+Gem for creating letter avatar from user's name (or any other strong / character).
 
-Code extracted from discourse source (thanks guys!) - I needed this functionality in three projects, so here's the gem! :-)
+Code extracted from [discourse](https://www.discourse.org/) source (thanks guys!) - I needed this functionality in three projects, so here's the gem! :-)
 
 [![Code Climate](https://codeclimate.com/github/ksz2k/letter_avatar/badges/gpa.svg)](https://codeclimate.com/github/ksz2k/letter_avatar)
 
@@ -82,8 +82,13 @@ There's also helper for this. To use it, you need:
 
   ```ruby
   letter_avatar_for('ksz2k', 200)
+  => "public/system/letter_avatars/2/K/87_178_230/200.png"
+  # or
+  letter_avatar_url('ksz2k', 200)
+  => "/system/letter_avatars/2/K/87_178_230/200.png"
   # or even
   letter_avatar_tag('ksz2k', 200, class: 'av')
+  => "<img class=\"av\" alt=\"ksz2k\" src=\"/system/letter_avatars/2/K/87_178_230/200.png\" />"
   ```
 
 ### Way to support non [a-z0-9] charsets
