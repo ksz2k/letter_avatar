@@ -4,7 +4,7 @@ module LetterAvatar
     PALETTES = [:google, :iwanthue]
 
     def self.for(username)
-      public_send("with_#{LetterAvatar.colors_palette}", username) rescue with_google(username)
+      public_send("with_#{LetterAvatar.colors_palette}", username)
     end
 
     def self.with_iwanthue(username)
