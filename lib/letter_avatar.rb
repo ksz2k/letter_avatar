@@ -17,6 +17,7 @@ module LetterAvatar
       execute(
         # NOTE: ORDER is important!
         %W{
+          convert
           #{from}
           -background transparent
           -gravity center
@@ -29,8 +30,6 @@ module LetterAvatar
         }.join(" ")
       )
       true
-    rescue => e
-      false
     end
   end
 
