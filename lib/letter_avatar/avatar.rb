@@ -64,31 +64,22 @@ module LetterAvatar
       end
 
       def generate_fullsize(identity)
-        color = identity.color
-        letter = identity.letter
-
-
         filename = fullsize_path(identity)
 
-        command = %W(
-          convert
-          -size #{FULLSIZE}x#{FULLSIZE}
-          xc:#{to_rgb(color)}
-          -pointsize 140
-          -font #{FONT_FILENAME}
-          -weight #{LetterAvatar.weight}
-          -fill '#{FILL_COLOR}'
-          -gravity Center
-          -annotate #{LetterAvatar.annotate_position} '#{letter}'
-          '#{filename}'
-        ).join(' ')
-
-        pid, stdin, stdout, stderr = POSIX::Spawn.popen4(command)
-        Process.waitpid(pid)
-        err = stderr.read
-        if err != nil && err.length > 0
-          raise "letter_avatar error: #{err.strip}"
-        end
+        LetterAvatar.execute(
+          %W(
+            convert
+            -size #{FULLSIZE}x#{FULLSIZE}
+            xc:#{to_rgb(identity.color)}
+            -pointsize 140
+            -font #{FONT_FILENAME}
+            -weight #{LetterAvatar.weight}
+            -fill '#{FILL_COLOR}'
+            -gravity Center
+            -annotate #{LetterAvatar.annotate_position} '#{identity.letter}'
+            '#{filename}'
+          ).join(' ')
+        )
 
         filename
       end
