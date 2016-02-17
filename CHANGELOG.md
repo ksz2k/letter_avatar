@@ -1,3 +1,9 @@
+0.1.9
+-----
+
+- `LetterAvatar::Configuration` module, `mattr_accessor` (depending on `ActiveSupport`) removed
+  fixes [#7](https://github.com/ksz2k/letter_avatar/issues/7)
+
 0.1.5
 -----
 
