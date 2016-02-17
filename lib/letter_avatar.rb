@@ -1,20 +1,10 @@
 require "letter_avatar/version"
+require "letter_avatar/configuration"
 require "letter_avatar/avatar"
 require "letter_avatar/avatar_helper"
 
 module LetterAvatar
-
-  mattr_accessor :cache_base_path
-  @@cache_base_path = nil
-
-  mattr_accessor :colors_palette
-  @@colors_palette = :google
-
-  mattr_accessor :weight
-  @@weight = 300
-
-  mattr_accessor :annotate_position
-  @@annotate_position = '-0+5'
+  extend LetterAvatar::Configuration
 
   def self.setup(&block)
     yield(self)
