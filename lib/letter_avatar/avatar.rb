@@ -102,10 +102,9 @@ module LetterAvatar
         raw = <<-SVG
 <?xml version="1.0" standalone="no"?>
 <svg width="240px" height="240px" viewBox="0 0 240 240" version="1.1"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   #{svg_bg}
-  <svg x="62" y="5">
+  <svg>
     #{svg_paths.join("\n") }
   </svg>
 </svg>

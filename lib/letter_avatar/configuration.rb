@@ -27,6 +27,14 @@ module LetterAvatar
       @weight = v
     end
 
+    def svg
+      @svg ||= false
+    end
+
+    def svg=(v)
+      @svg = v
+    end
+
     def annotate_position
       @annotate_position ||= '-0+5'
     end
