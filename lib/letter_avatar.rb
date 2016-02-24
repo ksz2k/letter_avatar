@@ -8,6 +8,9 @@ module LetterAvatar
 
   class ExecutionError < StandardError; end
 
+  mattr_accessor :svg
+  @@svg = true
+
   def self.setup(&block)
     yield(self)
   end
