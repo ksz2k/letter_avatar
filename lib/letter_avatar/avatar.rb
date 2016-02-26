@@ -95,13 +95,13 @@ module LetterAvatar
       def generate_svg(identity)
         filename = fullsize_path(identity)
 
-        svg_bg = %(<rect id="bg" fill=#{to_rgb(identity.color)} x="0" y="0" width="240" height="240"></rect>)
+        svg_bg = %(<rect id="bg" fill=#{to_rgb(identity.color)} x="0" y="0" width="#{FULLSIZE}" height="#{FULLSIZE}"></rect>)
         text_paths = Text2Path.convert(identity.letter, svg_font, font_size: 170).to_paths
         svg_paths = text_paths.map { |p| svg_path(p) }
 
         raw = <<-SVG
 <?xml version="1.0" standalone="no"?>
-<svg width="240px" height="240px" viewBox="0 0 240 240" version="1.1"
+<svg width="#{FULLSIZE}px" height="#{FULLSIZE}px" viewBox="0 0 #{FULLSIZE} #{FULLSIZE}" version="1.1"
   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   #{svg_bg}
   <svg>
