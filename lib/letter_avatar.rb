@@ -41,9 +41,14 @@ module LetterAvatar
 
   def self.execute(cmd)
     cmd = cmd.join(' ') if cmd.is_a?(Array)
-    pid, stdin, stdout, stderr = POSIX::Spawn.popen4(cmd)
-    Process.waitpid(pid)
-    err = stderr.read
+    if Gem.win_platform?
+      require "open3"
+      _stdout_str, err = Open3.capture3(cmd.tr("'", '"'))
+    else
+      pid, _stdin, _stdout, stderr = POSIX::Spawn.popen4(cmd)
+      Process.waitpid(pid)
+      err = stderr.read
+    end
     if err != nil && err.length > 0
       raise ExecutionError.new("letter_avatar execution error (when calling '#{cmd}'): '#{err.strip}'")
     else
