@@ -1,5 +1,10 @@
+0.1.11
+------
+
+- Windows support
+
 0.1.10
------
+------
 
 - `LetterAvatar::AvatarHelper` module tweaks
   - `letter_avatar_url` method, returning avatar proper url

@@ -1,3 +1,5 @@
+require 'posix/spawn'
+
 require "letter_avatar/version"
 require "letter_avatar/configuration"
 require "letter_avatar/avatar"
