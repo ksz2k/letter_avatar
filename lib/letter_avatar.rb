@@ -1,4 +1,4 @@
-require 'posix/spawn'
+require "posix/spawn"
 
 require "letter_avatar/version"
 require "letter_avatar/configuration"
@@ -42,7 +42,7 @@ module LetterAvatar
   end
 
   def self.execute(cmd)
-    cmd = cmd.join(' ') if cmd.is_a?(Array)
+    cmd = cmd.join(" ") if cmd.is_a?(Array)
     if Gem.win_platform?
       require "open3"
       _stdout_str, err = Open3.capture3(cmd.tr("'", '"'))
