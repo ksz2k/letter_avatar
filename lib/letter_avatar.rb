@@ -1,4 +1,4 @@
-require 'posix/spawn'
+require 'open3'
 
 require 'letter_avatar/version'
 require 'letter_avatar/configuration'
@@ -43,14 +43,10 @@ module LetterAvatar
   def self.execute(cmd)
     cmd = cmd.join(' ') if cmd.is_a?(Array)
     if Gem.win_platform?
-      require 'open3'
-      _stdout_str, err = Open3.capture3(cmd.tr("'", '"'))
-    else
-      pid, _stdin, _stdout, stderr = POSIX::Spawn.popen4(cmd)
-      Process.waitpid(pid)
-      err = stderr.read
+      cmd.tr!("'", '"')
     end
 
+    _stdout_str, err = Open3.capture3(cmd)
     if !err.nil? && !err.empty?
       raise ExecutionError.new("letter_avatar execution error (when calling '#{cmd}'): '#{err.strip}'")
     end

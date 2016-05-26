@@ -1,7 +1,12 @@
+0.2.0
+-----
+
+- Removed `posix-spawn` dependency, Open3 speed is ok.
+
 0.1.11
 ------
 
-- Windows support
+- Windows support.
 
 0.1.10
 ------
