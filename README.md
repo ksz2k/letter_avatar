@@ -96,7 +96,7 @@ There's also helper for this. To use it, you need:
 ```rb
 class User
   def username_for_avatar
-    # Translate chinese hanzi to pinyin
+    # Translate Chinese hanzi to pinyin
     # https://github.com/flyerhzm/chinese_pinyin
     Pinyin.t(self.username)
   end

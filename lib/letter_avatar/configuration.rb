@@ -1,8 +1,5 @@
-require "letter_avatar/colors"
-
 module LetterAvatar
   module Configuration
-
     def cache_base_path
       @cache_base_path
     end
@@ -34,6 +31,5 @@ module LetterAvatar
     def annotate_position=(v)
       @annotate_position = v
     end
-
   end
 end

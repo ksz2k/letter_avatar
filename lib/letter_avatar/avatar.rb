@@ -1,8 +1,5 @@
-require "letter_avatar/colors"
-
 module LetterAvatar
   class Avatar
-
     # BUMP UP if avatar algorithm changes
     VERSION = 2
 
@@ -12,10 +9,9 @@ module LetterAvatar
 
     FILL_COLOR = 'rgba(255, 255, 255, 0.65)'.freeze
 
-    FONT_FILENAME = File.join(File.expand_path("../../", File.dirname(__FILE__)), "Roboto-Medium")
+    FONT_FILENAME = File.join(File.expand_path('../../', File.dirname(__FILE__)), 'Roboto-Medium')
 
     class << self
-
       class Identity
         attr_accessor :color, :letter
 
@@ -27,7 +23,6 @@ module LetterAvatar
           identity
         end
       end
-
 
       def cache_path
         "#{LetterAvatar.cache_base_path || 'public/system'}/letter_avatars/#{VERSION}"
@@ -42,17 +37,17 @@ module LetterAvatar
         size = FULLSIZE if size > FULLSIZE
         filename = cached_path(identity, size)
 
-        return filename if cache && File.exists?(filename)
+        return filename if cache && File.exist?(filename)
 
         fullsize = fullsize_path(identity)
-        generate_fullsize(identity) if !cache || !File.exists?(fullsize)
+        generate_fullsize(identity) if !cache || !File.exist?(fullsize)
 
         LetterAvatar.resize(fullsize, filename, size, size)
         filename
       end
 
       def cached_path(identity, size)
-        dir = "#{cache_path}/#{identity.letter}/#{identity.color.join("_")}"
+        dir = "#{cache_path}/#{identity.letter}/#{identity.color.join('_')}"
         FileUtils.mkdir_p(dir)
 
         "#{dir}/#{size}.png"
@@ -83,14 +78,14 @@ module LetterAvatar
         filename
       end
 
-      def darken(color,pct)
+      def darken(color, pct)
         color.map do |n|
           (n.to_f * pct).to_i
         end
       end
 
       def to_rgb(color)
-        r,g,b = color
+        r, g, b = color
         "'rgb(#{r},#{g},#{b})'"
       end
     end
