@@ -1,3 +1,8 @@
+0.3.0
+-----
+
+- Removed `activesupport` dependency.
+
 0.2.0
 -----
 
