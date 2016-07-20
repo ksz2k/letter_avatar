@@ -8,6 +8,14 @@ module LetterAvatar
       @cache_base_path = v
     end
 
+    def fill_color
+      @fill_color
+    end
+
+    def fill_color=(v)
+      @fill_color = v
+    end
+
     def colors_palette
       @colors_palette ||= :google
     end
