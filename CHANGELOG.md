@@ -1,3 +1,8 @@
+0.3.1
+-----
+
+- added `LetterAvatar.fill_color` config option.
+
 0.3.0
 -----
 
