@@ -9,7 +9,7 @@ module LetterAvatar
     end
 
     def fill_color
-      @fill_color
+      @fill_color || Avatar::FILL_COLOR
     end
 
     def fill_color=(v)

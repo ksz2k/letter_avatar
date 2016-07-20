@@ -68,7 +68,7 @@ module LetterAvatar
             -pointsize 140
             -font #{FONT_FILENAME}
             -weight #{LetterAvatar.weight}
-            -fill '#{LetterAvatar.fill_color || FILL_COLOR}'
+            -fill '#{LetterAvatar.fill_color}'
             -gravity Center
             -annotate #{LetterAvatar.annotate_position} '#{identity.letter}'
             '#{filename}'
