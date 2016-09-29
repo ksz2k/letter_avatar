@@ -14,7 +14,7 @@ module LetterAvatar
 
     def letter_avatar_tag(name, size = 64, options = {})
       if defined?(ActionView::Helpers::AssetTagHelper)
-        include ActionView::Helpers::AssetTagHelper
+        extend ActionView::Helpers::AssetTagHelper
         image_tag(letter_avatar_url(name, size), options.merge(alt: name))
       else
         "<img alt=\"#{name}\" class\"#{options.fetch(:class)}\" src=\"#{letter_avatar_url(name, size)}\" />"
