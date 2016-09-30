@@ -1,3 +1,8 @@
+0.3.2
+-----
+
+- extend objects with `ActionView::Helpers::AssetTagHelper`
+
 0.3.1
 -----
 
