@@ -3,9 +3,6 @@ module LetterAvatar
     def self.included(base)
       base.send :include, InstanceMethods
       base.extend ClassMethods
-      base.class_eval do
-        include LetterAvatar::AvatarHelper
-      end
     end
 
     module ClassMethods
@@ -17,11 +14,11 @@ module LetterAvatar
       end
 
       def avatar_path(size = 64)
-        letter_avatar_for(name, size)
+        LetterAvatar.generate(name, size)
       end
 
       def avatar_url(size = 64)
-        letter_avatar_url(name, size)
+        LetterAvatar.path_to_url(avatar_path(size))
       end
 
     end
