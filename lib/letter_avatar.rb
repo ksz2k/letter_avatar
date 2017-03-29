@@ -52,4 +52,8 @@ module LetterAvatar
 
     true
   end
+
+  def self.path_to_url(path)
+    path.to_s.sub('public/', '/')
+  end
 end
