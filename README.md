@@ -71,6 +71,8 @@ LetterAvatar.generate 'ksz2k', 200
 => "public/system/letter_avatars/2/K/87_178_230/200.png"
 ```
 
+### In your controllers / views
+
 There's also helper for this. To use it, you need:
 
 * in your helper (eg. `ApplicationHelper`) or controller:
@@ -91,6 +93,30 @@ There's also helper for this. To use it, you need:
   letter_avatar_tag('ksz2k', 200, class: 'av')
   => "<img class=\"av\" alt=\"ksz2k\" src=\"/system/letter_avatars/2/K/87_178_230/200.png\" />"
   ```
+
+### In your model
+
+Say, you have a model `User` (which must have attribute or method `name`)
+
+```ruby
+class User
+  include LetterAvatar::HasAvatar
+  ...
+end
+```
+
+Then, in your views you can use:
+
+```ruby
+@user.avatar_path(200)
+=> "public/system/letter_avatars/2/K/87_178_230/200.png"
+# or
+@user.avatar_url(200)
+=> "/system/letter_avatars/2/K/87_178_230/200.png"
+# or even
+@user.avatar_tag(200, class: 'av')
+=> "<img class=\"av\" alt=\"ksz2k\" src=\"/system/letter_avatars/2/K/87_178_230/200.png\" />"
+```
 
 ### Way to support non [a-z0-9] charsets
 
