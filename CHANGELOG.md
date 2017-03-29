@@ -1,3 +1,8 @@
+0.3.4
+-----
+
+- enhanced `LetterAvatar::HasAvatar` helper module
+
 0.3.3
 -----
 
