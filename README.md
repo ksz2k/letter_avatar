@@ -4,6 +4,7 @@ Gem for creating letter avatar from user's name (or any other strong / character
 
 Code extracted from [discourse](https://www.discourse.org/) source (thanks guys!) - I needed this functionality in three projects, so here's the gem! :-)
 
+[![Gem Version](https://badge.fury.io/rb/letter_avatar.svg)](https://badge.fury.io/rb/letter_avatar)
 [![Code Climate](https://codeclimate.com/github/ksz2k/letter_avatar/badges/gpa.svg)](https://codeclimate.com/github/ksz2k/letter_avatar)
 
 ## Examples
