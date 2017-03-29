@@ -5,7 +5,7 @@ module LetterAvatar
     end
 
     def letter_avatar_url_for(avatar_path)
-      avatar_path.to_s.sub('public/', '/')
+      LetterAvatar.path_to_url(avatar_path)
     end
 
     def letter_avatar_url(name, size = 64)
