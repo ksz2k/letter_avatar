@@ -1,3 +1,8 @@
+0.3.3
+-----
+
+- removed `-interpolate` imagemagick option - it's removed in IMv7
+
 0.3.2
 -----
 
