@@ -24,10 +24,6 @@ module LetterAvatar
         letter_avatar_url(name, size)
       end
 
-      def avatar_tag(size = 64, options = {})
-        letter_avatar_tag(name, size, options)
-      end
-      
     end
   end
 end

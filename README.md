@@ -117,9 +117,6 @@ Then, in your views you can use:
 # or
 @user.avatar_url(200)
 => "/system/letter_avatars/2/K/87_178_230/200.png"
-# or even
-@user.avatar_tag(200, class: 'av')
-=> "<img class=\"av\" alt=\"ksz2k\" src=\"/system/letter_avatars/2/K/87_178_230/200.png\" />"
 ```
 
 ### Way to support non [a-z0-9] charsets
