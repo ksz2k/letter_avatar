@@ -102,6 +102,10 @@ Say, you have a model `User` (which must have attribute or method `name`)
 class User
   include LetterAvatar::HasAvatar
   ...
+
+  def name
+    'ksz2k'
+  end
 end
 ```
 
