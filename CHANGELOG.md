@@ -1,3 +1,9 @@
+0.3.5
+-----
+
+- `LetterAvatar::HasAvatar` helper module cleanup
+- `LetterAvatar.path_to_url` helper method
+
 0.3.4
 -----
 
