@@ -1,3 +1,9 @@
+0.3.6
+-----
+
+- added `LetterAvatar.letters_count` config option.
+- added `LetterAvatar.pointsize` config option.
+
 0.3.5
 -----
 
