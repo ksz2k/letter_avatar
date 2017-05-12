@@ -39,5 +39,21 @@ module LetterAvatar
     def annotate_position=(v)
       @annotate_position = v
     end
+    
+    def letters_count
+      @letters_count ||= 1
+    end
+
+    def letters_count=(v)
+      @letters_count = v
+    end
+
+    def pointsize
+      @pointsize ||= 140
+    end
+
+    def pointsize=(v)
+      @pointsize = v
+    end
   end
 end

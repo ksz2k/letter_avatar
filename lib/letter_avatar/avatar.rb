@@ -18,7 +18,8 @@ module LetterAvatar
         def self.from_username(username)
           identity = new
           identity.color = LetterAvatar::Colors.for(username)
-          identity.letter = username[0].upcase
+          letters = username.split(/\s+/).map {|word| word[0]}.join('')[0..LetterAvatar.letters_count - 1]
+          identity.letter = letters.upcase
 
           identity
         end
@@ -65,7 +66,7 @@ module LetterAvatar
             convert
             -size #{FULLSIZE}x#{FULLSIZE}
             xc:#{to_rgb(identity.color)}
-            -pointsize 140
+            -pointsize #{LetterAvatar.pointsize}
             -font #{FONT_FILENAME}
             -weight #{LetterAvatar.weight}
             -fill '#{LetterAvatar.fill_color}'
