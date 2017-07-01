@@ -274,6 +274,11 @@ module LetterAvatar
       end
     end
 
+		def self.with_custom(username)
+			custom_palette = LetterAvatar.custom_palette
+			custom_palette[Digest::MD5.hexdigest(username)[0...15].to_i(16) % custom_palette.length]
+		end
+
     # Colors form Google Inbox
     # https://inbox.google.com
     def self.google
