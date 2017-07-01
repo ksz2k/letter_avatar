@@ -21,7 +21,7 @@ module LetterAvatar
     end
 
     def colors_palette=(v)
-      @colors_palette = v if v.in?(Colors::PALETTES)
+      @colors_palette = v if Colors::PALETTES.include?(v)
     end
 
     def weight
