@@ -1,6 +1,6 @@
 module LetterAvatar
   module Colors
-    PALETTES = [:google, :iwanthue]
+    PALETTES = [:google, :iwanthue, :custom]
 
     GOOGLE_COLORS = [
       [226, 95, 81], # A
