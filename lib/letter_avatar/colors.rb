@@ -1,6 +1,6 @@
 module LetterAvatar
   module Colors
-    PALETTES = [:google, :iwanthue]
+    PALETTES = [:google, :iwanthue, :custom]
 
     GOOGLE_COLORS = [
       [226, 95, 81], # A
@@ -273,6 +273,22 @@ module LetterAvatar
         google[Digest::MD5.hexdigest(username)[0...15].to_i(16) % google.length]
       end
     end
+
+		def self.with_custom(username)
+			custom_palette = LetterAvatar.custom_palette
+			raise "Missing Custom Palette, please set config.custom_palette if using :custom" if custom_palette.nil?
+			raise "Invalid Custom Palette, please update config.custom_palette" unless valid_custom_palette
+			custom_palette[Digest::MD5.hexdigest(username)[0...15].to_i(16) % custom_palette.length]
+		end
+		
+		def self.valid_custom_palette
+			palette = LetterAvatar.custom_palette
+			return false unless palette.is_a?(Array)
+			return palette.all? do |color| 
+				false unless color.is_a?(Array)
+				color.all? {|i| i.is_a?(Integer) }
+			end
+		end
 
     # Colors form Google Inbox
     # https://inbox.google.com

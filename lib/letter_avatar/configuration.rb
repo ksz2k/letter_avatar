@@ -21,8 +21,16 @@ module LetterAvatar
     end
 
     def colors_palette=(v)
-      @colors_palette = v if v.in?(Colors::PALETTES)
+      @colors_palette = v if Colors::PALETTES.include?(v)
     end
+
+		def custom_palette
+			@custom_palette ||= nil
+		end
+
+		def custom_palette=(v)
+			@custom_palette = v
+		end
 
     def weight
       @weight ||= 300
