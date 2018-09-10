@@ -5,6 +5,7 @@ require 'letter_avatar/configuration'
 require 'letter_avatar/avatar'
 require 'letter_avatar/avatar_helper'
 require 'letter_avatar/colors'
+require 'letter_avatar/has_avatar'
 
 module LetterAvatar
   extend LetterAvatar::Configuration
