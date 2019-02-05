@@ -61,11 +61,22 @@ end
 
 #### Color palette
 
-We have two color palettes implemented: `iwanthue` and `google`.
+We have three color palettes implemented: `iwanthue`, `google` and `custom`.
 
 Each of them have different colors, but the `iwanthue` also differently calculates the color for specified username.
 
 The `google` selected will generate the same avatar for both, "Krzysiek" and "ksz2k" usernames given (both of them starts with letter "k"), but `iwanthue` will calculate it's md5 and then selects color, so there's huge chance that these usernames get different colors.
+
+##### Custom palette definition
+
+You can define your own `custom` palette:
+
+```ruby
+LetterAvatar.setup do |config|
+  config.colors_palette = :custom
+  config.custom_palette = [[120, 132, 205], [91, 149, 249], [72, 194, 249], [69, 208, 226]]
+end
+```
 
 ## Usage
 
