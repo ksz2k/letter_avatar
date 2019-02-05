@@ -21,8 +21,18 @@ module LetterAvatar
     end
 
     def colors_palette=(v)
-      @colors_palette = v if v.in?(Colors::PALETTES)
+      @colors_palette = v if Colors::PALETTES.include?(v)
     end
+
+		def custom_palette
+      @custom_palette ||= nil
+		end
+
+		def custom_palette=(v)
+      @custom_palette = v
+      raise "Missing Custom Palette, please set config.custom_palette if using :custom" if @custom_palette.nil? && @colors_palette == :custom
+			raise "Invalid Custom Palette, please update config.custom_palette" unless Colors::valid_custom_palette?(@custom_palette)
+		end
 
     def weight
       @weight ||= 300

@@ -5,7 +5,7 @@ module LetterAvatar
 
     # Largest avatar generated, one day when pixel ratio hit 3
     # we will need to change this
-    FULLSIZE = 240
+    FULLSIZE = 600
 
     FILL_COLOR = 'rgba(255, 255, 255, 0.65)'.freeze
 
