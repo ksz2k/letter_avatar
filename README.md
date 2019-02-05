@@ -113,6 +113,8 @@ There's also helper for this. To use it, you need:
 Say, you have a model `User` (which must have attribute or method `name`)
 
 ```ruby
+require 'letter_avatar/has_avatar'
+
 class User
   include LetterAvatar::HasAvatar
   ...
