@@ -78,6 +78,16 @@ LetterAvatar.setup do |config|
 end
 ```
 
+##### Custom font definition
+
+You can define your own `custom` palette:
+
+```ruby
+LetterAvatar.setup do |config|
+  config.font = File.join(File.expand_path('../../', File.dirname(__FILE__)), 'app/assets/fonts', 'font_name.ext')
+end
+```
+
 ## Usage
 
 ```ruby
