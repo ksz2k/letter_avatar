@@ -8,6 +8,14 @@ module LetterAvatar
       @cache_base_path = v
     end
 
+    def font
+      @font || Avatar::FONT_FILENAME
+    end
+
+    def font=(v)
+      @font = v
+    end
+
     def fill_color
       @fill_color || Avatar::FILL_COLOR
     end

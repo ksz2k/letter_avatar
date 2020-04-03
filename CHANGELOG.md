@@ -1,3 +1,8 @@
+0.3.8
+-----
+
+- added `LetterAvatar.font` config option.
+
 0.3.7
 -----
 

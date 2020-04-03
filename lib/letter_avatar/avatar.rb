@@ -67,7 +67,7 @@ module LetterAvatar
             -size #{FULLSIZE}x#{FULLSIZE}
             xc:#{to_rgb(identity.color)}
             -pointsize #{LetterAvatar.pointsize}
-            -font #{FONT_FILENAME}
+            -font #{LetterAvatar.font}
             -weight #{LetterAvatar.weight}
             -fill '#{LetterAvatar.fill_color}'
             -gravity Center
