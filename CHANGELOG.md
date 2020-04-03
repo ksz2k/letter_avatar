@@ -1,3 +1,9 @@
+0.3.7
+-----
+
+- added `LetterAvatar.custom_palette` config option.
+- bumped `FULLSIZE` to 600.
+
 0.3.6
 -----
 
