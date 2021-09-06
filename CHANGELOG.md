@@ -1,3 +1,8 @@
+0.3.9
+-----
+
+- small minor fixes and cleanups.
+
 0.3.8
 -----
 
