@@ -1,3 +1,5 @@
+require 'digest' 
+
 module LetterAvatar
   module Colors
     PALETTES = [:google, :iwanthue, :custom]
@@ -256,7 +258,7 @@ module LetterAvatar
 
     def self.with_iwanthue(username)
       iwanthue[
-        Digest::MD5.hexdigest(username)[0...15].to_i(16) % iwanthue.length
+        ::Digest::MD5.hexdigest(username)[0...15].to_i(16) % iwanthue.length
       ]
     end
 
@@ -270,13 +272,13 @@ module LetterAvatar
       elsif /[\d]/ =~ char
         google[char.to_i]
       else
-        google[Digest::MD5.hexdigest(username)[0...15].to_i(16) % google.length]
+        google[::Digest::MD5.hexdigest(username)[0...15].to_i(16) % google.length]
       end
     end
 
 		def self.with_custom(username)
 			custom_palette = LetterAvatar.custom_palette
-			custom_palette[Digest::MD5.hexdigest(username)[0...15].to_i(16) % custom_palette.length]
+			custom_palette[::Digest::MD5.hexdigest(username)[0...15].to_i(16) % custom_palette.length]
 		end
 		
 		def self.valid_custom_palette?(palette)

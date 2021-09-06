@@ -31,7 +31,7 @@ module LetterAvatar
       ).join(' ')
     )
     true
-  rescue
+  rescue => e
     false
   end
 

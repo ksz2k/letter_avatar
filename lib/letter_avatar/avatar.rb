@@ -1,3 +1,5 @@
+require 'fileutils'
+
 module LetterAvatar
   class Avatar
     # BUMP UP if avatar algorithm changes
@@ -41,9 +43,11 @@ module LetterAvatar
         return filename if cache && File.exist?(filename)
 
         fullsize = fullsize_path(identity)
-        generate_fullsize(identity) if !cache || !File.exist?(fullsize)
-
+        if !cache || !File.exist?(fullsize)
+          generate_fullsize(identity) 
+        end 
         LetterAvatar.resize(fullsize, filename, size, size) if size != FULLSIZE
+
         filename
       end
 
